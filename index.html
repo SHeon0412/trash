@@ -1,5 +1,104 @@
-<html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Naenam Fault Array 2020</title>
+    <link rel="stylesheet" href="css/a.css">
+    <link rel="stylesheet" href="css/div.css">
+</head>
+<body>
+<div>
 
-<body>Hello, world!</body>
+<h1>Naenam Fault Array 2020</h1>
+<h2>Participants of the campaign</h2>
 
-</html>
+<img src="picture/down_IMG_1044.jpg" alt="deployment">
+<p>Participants of the deployment in August 2020. 
+From left, Byeong Seok Ahn, Sangwoo Han, 
+Hyunsun Kang, Min Seong Seo, Joa Kwon, 
+Yeongjae Choi, Min Hyug Koh, Dabeen Heo, 
+Ki Baek Kwon, Gyeongdon Chai, Jun Yong Park, 
+Jaeseoung Han, Young Oh Son, Yunsun Jung,
+YoungHee Kim, and Hobin Lim who is taking this picture.</p>
+<p>Seoul National University, Republic of Korea</p>
+<p>Pukyong National University, Republic of Korea</p>
+<p>Korea University, Republic of Korea </p>
+
+<h2><a style="text-decoration:none" href="map/map01.html">Map of the stations</a></h2>
+<p>Station names are ascending order along the array from west to east.</p>
+<p>Added Gyeongju Hi-density Broadband Seismic Network (2021-09-06)</p>
+
+<h2>Expected teleseismic signals (2020/11/20-2020/12/20, M&gt;5.5, Dist&lt;100deg, N=20)</h2>
+
+<img src="expected_tele/01/small_map.jpg" alt="expected">
+<p>(https://earthquake.usgs.gov/)</p>
+
+<h2>Local earthquakes</h2>
+
+<p><a style="text-decoration:none" href="local/local01.csv">local01.csv</a> (https://necis.kma.go.kr/, accessed on 27 January 2021) </p>
+
+<h2>Metadata</h2>
+
+<p><a style="text-decoration:none" href="meta/meta09.xlsx">meta09.xlsx</a> (updated on 16 Jun 2021) </p>
+<!--<p><a style="text-decoration:none" href="meta/meta08.xlsx">meta08.xlsx</a> (updated on 18 Jan 2021) </p>-->
+
+<h2>Instrument response files</h2>
+<p><a style="text-decoration:none" href="resp/resp06.zip">resp06.zip</a> (9 June 2021) Mismatched units between stages are fixed.</p>
+<p>You might need to multiply -1 for the exact polarity for all the Z, E, and N components. (2021-09-07, resp06.zip)</p>
+<p>RESP.NN.215A.EP*, RESP.NN.215D.EP*, and RESP.NN.215C.EP* are missing in resp06.zip... Let me make them soon. (2021-09-06)</p>
+
+<p>SAC) transfer from evalresp fname ./resp05/RESP.NN.580D.DPZ freq f1 f2 f3 f4 to vel [output unit = nm/s]<br>
+SAC) mul -1</p>
+
+<p>SAC) transfer from evalresp fname ./resp05/RESP.NN.580D.DPZ freq f1 f2 f3 f4 to none [output unit = nm]<br>
+SAC) mul -1</p>
+
+<p>A factor of 1e9 to convert meter into nanometer is embedded internally in the program SAC (101.6a; 102.0), not in the response files uproaded.
+Try to find 'unitScaleFact' in the source code of SAC (e.g., grep -ri 'unitScaleFact' ./*).
+This is, I think, confusing when you use RESP or SACPZ, formats of the response files, interchangeably.
+Using the SACPZ format does not behave like that.
+See also <a style="text-decoration:none" href="http://ds.iris.edu/files/sac-manual/commands/transfer.html">SAC manual</a> for more information.</p>
+
+<p>Previous versions</p>
+<p><a style="text-decoration:none" href="resp/resp05.zip">resp05.zip</a>(22 Jan 2021)</p>
+
+<h2><a style="text-decoration:none" href="stp/index.html">STP client (data providing program)</a></h2>
+<p>[2021-02-08] Early deployed stations (*A, *B, *C) are ready.</p>
+<p>[2021-01-22] Main stations (*D) are ready.</p>
+<p>(account required)</p>
+
+<h2><a style="text-decoration:none" href="orientation/index.html">Orientation correction (?)</a></h2>
+
+<h2><a style="text-decoration:none" href="avail/index.html">Availability</a></h2>
+
+<h2><a style="text-decoration:none" href="deploylog/index.html">Deployment log </a><br></h2>
+
+<h2>Publications</h2>
+<p>Lim, H., Kang, H., Koh, M. H., Kwon, J., Park, J. Y., Seo, M.-S., Son, Y. O., Han, S., Kang, T.-S., Rhie, J., Kim, K.-H., Kim, Y., Ree, J.-H., Kwon, K. B., Han, J., Ahn, B. S., Chai, G., Choi, Y., Heo, D., &amp; Jung, Y. (2021). Deployment of the linear array with geophones on the fault zone of the 2016 Mw 5.5 Gyeongju earthquake. Journal of the Geological Society of Korea, 57(5), 741–746. https://doi.org/10.14770/jgsk.2021.57.5.741</p>
+
+
+<h2><a style="text-decoration:none" href="https://www.notion.so/2020-f51f4f14cc234f0d8011dc22e4ccb1e8">Education</a> <br></h2>
+
+
+<h2>Backup of this site</h2>
+<p>This site is backed up at <a href="https://doi.org/10.5281/zenodo.4661926">https://doi.org/10.5281/zenodo.4661926</a></p>
+
+<h2>Site administrator</h2>
+<p>Hobin Lim</p>
+<p>Postdoc at Seoul National University</p>
+<p>(now at Korea Institute of Geoscience and Mineral Resources)</p>
+<p>hbim76(a)gmail.com; HBL(a)kigam.re.kr</p>
+
+<br>
+<br>
+<br>
+
+<!--Last updated on 16 November 2020 (hbim)-->
+
+</div>
+
+
+
+
+
+
+
+</body></html>
